@@ -1,0 +1,30 @@
+.container {
+    background-color :thistle;
+    border : 4px solid blue;
+    display: flex;
+    position : fixed;
+    top : 0;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    overflow : overlay;
+    flex-direction : column;
+}
+
+.layout {
+    background-color: aquamarine;
+    border : 4px solid red;
+    display : flex;
+    flex : 1;  /* grow, shrink, basis가 1 1 0 의미 */
+    /*
+    grow : 아이템이 기본값을 넘어 넓어질 수 있는지 설정 (1만 줘도 화면 끝까지 채움)
+    shrink : 화면 축소시 줄어드는 비율. 크기 유지하고 싶으면 0
+    basis : flow나 shrink로 늘어나거나 줄어들기 전의 기본 크기 설정
+    */
+}
+
+.contents {
+    background-color: cornsilk;
+    border : 4px solid green;
+    flex : 1;
+}
