@@ -1,0 +1,66 @@
+.header {
+    display: flex;
+    position: fixed;
+    top : 0;
+    width: 100%;
+    height : 56px;
+    padding : 0 16px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between; /* 요소들 사이에만 여유 공간 두고 배치 */
+    box-sizing: border-box;
+}
+
+/*
+    box-sizing은 박스의 크기를 어떤 것을 기준으로 계산할 지 정함.
+    border-box : 테두리를 기준으로 크기 정함
+*/
+
+/* flex box 제공 속성 (http://www.tcpschool.com/css/css3_expand_flexbox)
+1. display
+2. flex-direction : 플렉스 요소가 배치될 방향 설정
+3. justify-content : 플렉스 요소의 수평 방향 정력 방식을 설정
+4. align-items : 플렉스 요소의 수직 방향 정렬 방식 설정 (두 줄 이상일 때)
+5. flex-wrap : 플렉스 라인에 더 이상의 여유 공간이 없을 때, 다음 줄로 넘길지 설정
+6. flex-flow
+7. align-content : flex-wrap 속성의 동작 변경
+*/
+
+.tab {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width : 24px;
+    height: 24px;
+    padding: 8px;
+    cursor : pointer;
+}
+
+.logo {
+    padding-left: 16px;
+}
+
+.center-tab {
+    display: flex;
+    align-items: center;
+    flex: 0 1 640px;
+    padding: 0 16px;
+}
+
+.input {
+    height: 30px;
+    border: 1px solid #d3d3d3d3;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    padding: 2px 20px;
+    border: 1px solid #d3d3d3;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
