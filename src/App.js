@@ -1,18 +1,18 @@
 import './App.css';
-import Layout from './components/shared/Layout';
-import {useState} from "react";
+import {Route, Routes} from 'react-router-dom';
+import Home from './pages/Home';
+import Explore from './pages/Explore';
+import Subscription from './pages/Subscription';
+import Assignment from './pages/Assignment';
 
 function App() {
-  const [result, setResult] = useState(false);
-  
-  function onClick() {
-    setResult(!result);
-  }
-
   return (
-    <Layout>
-      <div>콘텐츠!</div>
-    </Layout>
+    <Routes>
+      <Route path="/" exact={true} element={<Home/>}/>
+      <Route path="/explore" element={<Explore/>}/>
+      <Route path="/subscription" element={<Subscription/>}/>
+      <Route path="/assignment" element={<Assignment/>}/>
+    </Routes>
   );
 }
 

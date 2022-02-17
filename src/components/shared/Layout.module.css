@@ -27,5 +27,6 @@
 .contents {
     background-color: cornsilk;
     border : 4px solid green;
+    margin-left: 20px;
     flex : 1;
 }
