@@ -11,24 +11,27 @@ function Menu({activeMenu}) {
 		<Link
 		to="/"
 		className={activeMenu==='home' ? styles.focused:styles.link}>
-			<TiHome className={styles.icon}/>홈
+			<TiHome className={styles.icon}/>
+			<div className={styles.text}>홈</div>
 		</Link>
 		<Link
 		to="/explore"
 		className={activeMenu==='explore' ? styles.focused:styles.link}>
-			<FaRegCompass className={styles.icon}/>탐색
+			<FaRegCompass className={styles.icon}/>
+			<div className={styles.text}>탐색</div>
 		</Link>
 		<Link
 		to="/subscription"
 		className={activeMenu==='subscription' ? styles.focused:styles.link}>
-			<MdSubscriptions className={styles.icon}/>구독
+			<MdSubscriptions className={styles.icon}/>
+			<div className={styles.text}>구독</div>
 		</Link>
 		<Link
 		to="/assignment"
-		className={styles.link}>
-			<GrNotes className={styles.icon}/>과제
+		className={activeMenu==='assignment' ? styles.focused:styles.link}>
+			<GrNotes className={styles.icon}/>
+			<div className={styles.text}>과제</div>
 		</Link>
-
     </div>
   )
 }
