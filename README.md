@@ -151,3 +151,65 @@ className={activeMenu === 'home} ? syles.focused : styles.link}
   }
 }
 ```
+
+## 7. map
+- map : 배열과 함수를 인자로 받고, 배열의 요소를 돌면서 전달된 함수를 적용한 새로운 배열을 반환하는 메소드
+```
+function Explore() {
+  function mapFunction(data, index) {
+    return (
+      <div>
+        {index} : {data}
+      </div>
+    );
+  }
+
+  return (
+    <Layout activeMenu="explore">
+      <ContentsLayout>
+        {['모각코', '리액트', '유튜브', '클론코딩'].map(mapFunction)}
+      </ContentsLayout>
+    </Layout>
+  );
+}
+```
+위에서 표현된 `배열.map(mapFunction)`을 풀어쓰면 아래와 같다.
+```
+{mapFuncion('모각코', 0)}
+{mapFuncion('리액트', 1)}
+{mapFuncion('유튜브', 2)}
+{mapFuncion('클론코딩', 3)}
+```
+
+### 실제 데이터에 map 함수 적용
+```
+/* 먼저 정의된 ExploreCard 함수 */
+function ExploreCard(data, index) {
+  return (
+    <div>
+      <div>{index}.</div>
+      <div>제목 : {data.title}</div>
+      <div>업로더 : {data.channelTitle}</div>
+      <br />
+    </div>
+  );
+}
+
+/* 위의 함수를 map함수와 적용시키면 */
+{youtubeData['data'].map(ExploreCard)}
+```
+
+### key 속성 추가
+- 배열의 요소들로 map 함수를 통해 새로 생성된 자식 컴포넌트에게는 고유한 key가 필요
+- key 속성을 추가해서 컴포넌트의 유일성 부여
+- 이유 : 각각의 컴포넌트를 식별할 key가 없으면 어떤 컴포넌트의 데이터가 변경되었는지 알 수 없음 => 데이터가 변경된 컴포넌트가 리렌더링하면 되는 것을 배열의 모든 컴포넌트를 리렌더링하는 불필요한 과정이 발생.
+- key 속성은 리턴되는 JSX의 최상단 태그에 부여하면 된다.
+```
+function ExploreCard(data,index) {
+  return (
+    <div key={`explore-card-${index}`}>
+    <div>{index}.</div>
+    <div>제목 : {data.title}</div>
+  );
+}
+```

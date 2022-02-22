@@ -1,0 +1,64 @@
+a {
+    text-decoration: none;
+    color: #606060;
+}
+.card {
+    display: flex;
+    margin-bottom: 16px;
+    max-width: 862px;
+}
+.thumbnail { 
+    flex: 0 0 246px;
+    width: 246px;
+    object-fit: fill;
+    margin-right: 16px;
+}
+.title {
+    color: #030303;
+    font-size: 18px;
+}
+.info {
+    flex: 1;
+    width: 200px;
+}
+.meta {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+.uploader:hover {
+    color: #030303;
+}
+.uploader::after,
+.view::after {
+    content: '•';
+    margin: 0 4px;
+}
+.desc {
+    font-size: 12px;
+}
+.title,
+.desc {
+    /* 2줄이 넘을 경우 ... 표시 */
+    display: -webkit-box;
+    overflow: hidden;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/*
+https://developer.mozilla.org/ko/docs/Web/CSS/-webkit-line-clamp 참고
+-webkit-line-clamp : 블록 컨테이너의 콘텐츠를 지정한 줄 수 만큼 제한
+조건1 : display 속성을 -webkit-box 또는 -webkit-inline-box로 설정
+조건2 : -webkit-box-orient 속성을 vertical로 설정
+
+-webkit-line-clamp만 사용하는 경우, 말줄임표는 노출되너 넘친 콘텐츠가 숨겨지지 않으므로
+overflow 속성도 hidden으로 설정해야 함
+*/
+  
+  @media screen and (max-width: 529px) {
+    .info {
+      display: none;
+    }
+  }
