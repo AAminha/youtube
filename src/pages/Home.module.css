@@ -1,0 +1,32 @@
+.header {
+  position:fixed;
+  width: 100%;
+  height: 56px;
+  box-sizing: border-box;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  background-color: white;
+}
+.container {
+  margin-top: 56px;
+  padding: 24px 36px 24px 24px;
+  background-color: #f9f9f9;
+}
+.grid {
+  display: grid;
+  width: 100%;
+  row-gap: 40px;
+  column-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+}
+
+/*
+https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_concepts_of_grid_layout 참고
+
+grid : 수평선과 수직선이 교차해서 이루어진 집합체
+하나의 집합체는 세로 열을, 다른 하나는 가로 행을 정의
+열과 행으로 된 라인을 따라 생성된 그리드에 배치할 수 있다.
+*/
