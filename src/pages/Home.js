@@ -1,7 +1,7 @@
 import Layout from "../components/shared/Layout";
-import HomeFilter from "../components/shared/home/HomeFilter";
+import HomeFilter from "../components/home/HomeFilter";
 import youtubeData from "../data/youtubeData.json"
-import HomeCard from "../components/shared/home/HomeCard";
+import HomeCard from "../components/home/HomeCard";
 import styles from "./Home.module.css";
 import { useState } from "react";
 

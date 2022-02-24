@@ -1,6 +1,9 @@
-import styles from './ExploreCard.module.css';
+import styles from './HorizontalCard.module.css';
+import moment from 'moment';
+import 'moment/locale/ko';
+import {ProcessViewCount} from '../../utils';
 
-function ExploreCard({ data }) {
+function HorizontalCard({ data }) {
 	return (
     <a href={`https://www.youtube.com/watch?v=${data.id}`}>
       <div className={styles.card}>
@@ -18,8 +21,8 @@ function ExploreCard({ data }) {
             >
               {data.channelTitle}
             </a>
-            <div className={styles.view}>{data.viewCount}</div>
-            <div className={styles.time}>{data.date}</div>
+            <div className={styles.view}>{ProcessViewCount(data.viewCount)}</div>
+            <div className={styles.time}>{moment(data.date).fromNow()}</div>
           </div>
           <div className={styles.desc}>{data.description}</div>
         </div>
@@ -27,4 +30,4 @@ function ExploreCard({ data }) {
     </a>
   );
 }
-export default ExploreCard;
+export default HorizontalCard;
