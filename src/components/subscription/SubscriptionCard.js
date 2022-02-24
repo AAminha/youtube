@@ -10,7 +10,7 @@ function SubscriptionCard({data}) {
       >
         <img
           className={styles['channel-image']}
-          stc={data.channelThumbnail}
+          src={data.channelThumbnail}
           alt={`${data.channelTitle} 프로필 사진`}
         />
         <div>{data.channelTitle}</div>

@@ -1,7 +1,7 @@
 import styles from "./HomeCard.module.css";
-import moment from 'moment';
+//import moment from 'moment';
 import 'moment/locale/ko';
-import {ProcessViewCount} from '../../utils';
+import {ProcessUploadDate, ProcessViewCount} from '../../utils';
 
 // 영상 하나하나의 데이터를 받아 영상 디자인을 리턴해 주는 컴포넌트
 function HomeCard(data, index) {
@@ -32,7 +32,7 @@ function HomeCard(data, index) {
             <div className={styles.view}>
               {ProcessViewCount(data.viewCount)}
             </div>
-            <div className={styles.date}>{moment(data.date).fromNow()}</div>
+            <div className={styles.date}>{ProcessUploadDate(data.date)}</div>
           </div>
         </div>
       </div>
