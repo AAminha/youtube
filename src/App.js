@@ -11,7 +11,7 @@ function App() {
       <Route path="/" exact={true} element={<Home/>}/>
       <Route path="/explore" element={<Explore/>}/>
       <Route path="/subscription" element={<Subscription/>}/>
-      <Route path="/assignment" element={<Assignment/>}/>
+      {/* <Route path="/assignment" element={<Assignment/>}/> */}
     </Routes>
   );
 }

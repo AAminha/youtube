@@ -26,12 +26,12 @@ function Menu({activeMenu}) {
 			<MdSubscriptions className={styles.icon}/>
 			<div className={styles.text}>구독</div>
 		</Link>
-		<Link
+		{/* <Link
 		to="/assignment"
 		className={activeMenu==='assignment' ? styles.focused:styles.link}>
 			<GrNotes className={styles.icon}/>
 			<div className={styles.text}>과제</div>
-		</Link>
+		</Link> */}
     </div>
   )
 }
